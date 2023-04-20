@@ -13,12 +13,15 @@ public class HeroAction : MonoBehaviour
     [SerializeField]
     private GameObject rangePrefab;
 
-    [SerializeField]
-    private Sprite faceIcon;
-
     private GameObject currentAttack;
-    private GameObject meleeAttack;
-    private GameObject rangeAttack;
+    //private GameObject meleeAttack;
+    //private GameObject rangeAttack;
+
+    public void Start()
+    {
+        hero = GameObject.FindGameObjectWithTag("Hero");
+        enemy = GameObject.FindGameObjectWithTag("Enemy");
+    }
 
     public void SelectAttack(string btn)
     {
@@ -30,16 +33,21 @@ public class HeroAction : MonoBehaviour
 
         if(btn.CompareTo("Melee") == 0)
         {
-            Debug.Log("Melee Attack");
-        } else if(btn.CompareTo("Defence") == 0)
+            if(meleePrefab == null)
+            {
+                Debug.Log(this.gameObject.name);
+                meleePrefab = this.gameObject.transform.GetChild(0).gameObject;
+            } else
+            {
+                Debug.Log("Not null");
+            }
+            meleePrefab.GetComponent<AttackScript>().Attack(victim);
+
+        } else if(btn.CompareTo("Range") == 0)
         {
-            Debug.Log("Shield Up");
-        }else if(btn.CompareTo("Slash") == 0)
-        {
-            Debug.Log("Slash Attack");
-        }else if(btn.CompareTo("Item") == 0)
-        {
-            Debug.Log("Item Used");
+
+            rangePrefab.GetComponent<AttackScript>().Attack(victim);
+        
         } else
         {
             Debug.Log("Fire!");
