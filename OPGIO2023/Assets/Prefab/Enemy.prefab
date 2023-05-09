@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &5498009342220856901
+--- !u!1 &6017789889961634019
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,47 +8,44 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 5498009342220856923}
-  - component: {fileID: 5498009342220856922}
+  - component: {fileID: 5130853354474616619}
+  - component: {fileID: 5530280672043235132}
   m_Layer: 0
-  m_Name: MeleePrefab
+  m_Name: Enemy
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &5498009342220856923
+--- !u!4 &5130853354474616619
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5498009342220856901}
+  m_GameObject: {fileID: 6017789889961634019}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.59819245, y: -0.17531015, z: 0.21184057}
+  m_LocalPosition: {x: -0.030254148, y: 0.084470354, z: -0.06298831}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &5498009342220856922
+--- !u!114 &5530280672043235132
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5498009342220856901}
+  m_GameObject: {fileID: 6017789889961634019}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b78c41cafc602734e91779ee0aa42846, type: 3}
+  m_Script: {fileID: 11500000, guid: bb8799b8a47346546a3bc5a33991502f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  owner: {fileID: 0}
-  animationName: Melee
-  magicAttack: 0
-  magicCost: 0
-  minAttackMultiplier: 0.3
-  maxAttackMultiplier: 1.1
-  minDefenceMultiplier: 0.4
-  maxDefenceMultiplier: 1
+  unitName: 
+  unitLevel: 0
+  damage: 0
+  maxHp: 0
+  currentHp: 0

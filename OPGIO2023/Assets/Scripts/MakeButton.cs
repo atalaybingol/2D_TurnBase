@@ -23,7 +23,8 @@ public class MakeButton : MonoBehaviour
     {
         if(btn.CompareTo("MeleeBtn") == 0)
         {
-            hero.GetComponent<HeroAction>().SelectAttack("Melee");
+            Debug.Log("sadfg");
+            //hero.GetComponent<HeroAction>().SelectAttack("Melee");
         } else if(btn.CompareTo("DefenceBtn") == 0)
         {
             hero.GetComponent<HeroAction>().SelectAttack("Defence");
