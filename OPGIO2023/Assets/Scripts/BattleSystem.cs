@@ -37,7 +37,7 @@ public class BattleSystem : MonoBehaviour
         enemyUnit = enemyGO.GetComponent<Unit>();
 
         playerHUD.SetHUD(playerUnit);
-        enemyHUD.SetHUD(enemyUnit);
+        //enemyHUD.SetHUD(enemyUnit);
 
         yield return new WaitForSeconds(2f);
 
@@ -105,6 +105,7 @@ public class BattleSystem : MonoBehaviour
 
     public void OnAttackButton()
     {
+        Debug.Log("Melee butonuna ulaþýldý");
         if(state != BattleState.PLAYERTURN)
         {
             return;
